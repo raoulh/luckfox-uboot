@@ -472,7 +472,7 @@ int board_late_init(void)
 #ifdef CONFIG_ROCKCHIP_SET_SN
 	rockchip_set_serialno();
 #endif
-	/* setup_download_mode(); */ /* FIXME: SARADC reads ~0, falsely triggers download key */
+	setup_download_mode();
 	scan_run_cmd();
 #ifdef CONFIG_ROCKCHIP_USB_BOOT
 	boot_from_udisk();
